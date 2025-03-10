@@ -367,6 +367,17 @@ background-color: #FFAB6A;
     .menu-sidebar{
         right: 300px;
     }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--light-grayish-blue) ;
+        padding-top:20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
     header .header-icon-cart-container{
         display: flex;
         align-items: center;

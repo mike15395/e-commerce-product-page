@@ -365,7 +365,7 @@ background-color: #FFAB6A;
 
 @media all and (max-width:480px){
     .menu-sidebar{
-        right: 500px;
+        right: 100px;
     }
     main{
         margin: 20px;

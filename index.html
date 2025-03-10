@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -10,10 +10,25 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="menu-sidebar" style="display: none">
+    <img src="./images/icon-close.svg" alt="close-icon" class="close-icon">
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    
+
+  </div>
 <header>
   
     <nav>
-      <img src="./images/logo.svg" alt="logo" class="header-logo"/>
+      <div class="logo-container">
+        <img src="./images/icon-menu.svg" alt="menu-icon" class="menu-icon">
+        <img src="./images/logo.svg" alt="logo" class="header-logo"/>
+      </div>
 
       <ul>
         <li>Collections</li>
@@ -67,6 +82,6 @@
     </section>
   </main>
   
- 
+ <script src="./script.js"></script>
 </body>
 </html>

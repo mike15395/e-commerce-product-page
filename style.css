@@ -365,7 +365,10 @@ background-color: #FFAB6A;
 
 @media all and (max-width:480px){
     .menu-sidebar{
-        right: 300px;
+        right: 500px;
+    }
+    main{
+        margin: auto;
     }
 
     header{

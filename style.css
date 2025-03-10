@@ -367,6 +367,9 @@ background-color: #FFAB6A;
     .menu-sidebar{
         right: 200px;
     }
+    .menu-sidebar .close-icon{
+        margin-top: 20px;
+    }
     main{
         margin: 20px;
     }

@@ -22,6 +22,17 @@
     
 
   </div>
+  <div class="cart-content-container">
+    <div class="cart-content-header">
+      <b>Cart</b>
+    </div>
+    <div class="cart-content">
+
+      
+
+
+    </div>
+  </div>
 <header>
   
     <nav>
@@ -39,7 +50,10 @@
       </ul>
     </nav>
     <div class="header-icon-cart-container">
-      <img src="./images/icon-cart.svg" alt="cart-icon"  class="cart-icon"/>
+      <div class="cart-container">
+        <span class="cart-count" id="cart-count"></span>
+        <img src="./images/icon-cart.svg" alt="cart-icon"  class="cart-icon"/>
+      </div>
       <img src="./images/image-avatar.png" alt="image-avatar" class="image-avatar">
     </div>
 </header>
@@ -74,8 +88,8 @@
       </div>
       <div class="quantity-button-container">
         <div class="quantity-container">
-          <img src="./images/icon-minus.svg" alt="icon-minus">0
-          <img src="./images/icon-plus.svg" alt="icon-plus">
+          <button class="decrement-button"><img src="./images/icon-minus.svg" alt="icon-minus" ></button><span class="quantity-count"></span>
+          <button class="increment-button"><img src="./images/icon-plus.svg" alt="icon-plus" ></button>
         </div>
         <button class="add-to-cart-button"> <img src="./images/icon-cart.svg" alt="icon-cart-button"> Add to cart</button>
       </div>

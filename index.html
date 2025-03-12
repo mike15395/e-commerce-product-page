@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="menu-sidebar" style="display: none">
+  <div class="menu-sidebar" style="display: none" aria-labelledby="menu-sidebar-for-tablet-and-mobile-only">
     <img src="./images/icon-close.svg" alt="close-icon" class="close-icon">
     <ul>
       <li>Collections</li>
@@ -22,16 +22,49 @@
     
 
   </div>
-  <div class="cart-content-container">
+  <div class="cart-content-container" aria-labelledby="cart-content-container">
     <div class="cart-content-header">
       <b>Cart</b>
     </div>
     <div class="cart-content">
-
-      
-
-
     </div>
+  </div>
+
+  <div class="modal" id="Lightbox" aria-labelledby="lightbox-modal-contains-big-product-images">
+    <span class="close pointer" onclick="closeLightbox()">&times;</span>
+    <div class="modal-content">
+      <div class="slide">
+        <img src="./images/image-product-1.jpg" class="image-slide" alt="slide-image" />
+      </div>
+      <div class="slide">
+        <img src="./images/image-product-2.jpg" class="image-slide" alt="slide-image" />
+      </div>    
+      <div class="slide">
+        <img src="./images/image-product-3.jpg" class="image-slide" alt="slide-image" />
+      </div>
+      <div class="slide">
+        <img src="./images/image-product-4.jpg" class="image-slide" alt="slide-image" />
+      </div>
+
+      <a class="previous" onclick="changeSlide(-1)"><img src="./images/icon-previous.svg" alt="previous-icon-slider"/></a>
+      <a class="next" onclick="changeSlide(1)"><img src="./images/icon-next.svg" alt="next-icon-slider"/></a>
+
+      <div class="dots">
+        <div class="col">
+          <img src="./images/image-product-1-thumbnail.jpg" class="modal-preview hover-shadow" onclick="toSlide(1)" alt="thumbnail-image" />
+        </div>
+        <div class="col">
+          <img src="./images/image-product-2-thumbnail.jpg" class="modal-preview hover-shadow" onclick="toSlide(2)" alt="thumbnail-image" />
+        </div>
+        <div class="col">
+          <img src="./images/image-product-3-thumbnail.jpg" class="modal-preview hover-shadow" onclick="toSlide(3)" alt="thumbnail-image" />
+        </div>
+        <div class="col">
+          <img src="./images/image-product-4-thumbnail.jpg" class="modal-preview hover-shadow" onclick="toSlide(4)" alt="thumbnail-image" />
+        </div>
+      </div>
+    </div> 
+
   </div>
 <header>
   
@@ -49,7 +82,7 @@
         <li>Contact</li>
       </ul>
     </nav>
-    <div class="header-icon-cart-container">
+    <div class="header-icon-cart-container" aria-labelledby="cart-icon-and-image-avatar">
       <div class="cart-container">
         <span class="cart-count" id="cart-count"></span>
         <img src="./images/icon-cart.svg" alt="cart-icon"  class="cart-icon"/>
@@ -60,17 +93,22 @@
 
   <main>
 
-    <section class="product-image-section">
-      <img src="./images/image-product-1.jpg" alt="main-product-image"  class="main-image">
+    <section class="product-image-section" aria-labelledby="image-section-contains-product-images">
+
+      <div class="main-image-container">
+        <a class="previous-small" onclick="changeSlide(-1)"><img src="./images/icon-previous.svg" alt="previous-icon-slider"/></a>
+        <a class="next-small" onclick="changeSlide(1)"><img src="./images/icon-next.svg" alt="next-icon-slider"/></a>
+        <img src="./images/image-product-1.jpg" alt="main-product-image"  class="main-image">
+      </div>
       <div class="product-more-images-container">
-        <img src="./images/image-product-1-thumbnail.jpg" alt="product-1-thumnail" class="thumbnail-image">
-        <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="thumbnail-image">
-        <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="thumbnail-image">
-        <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="thumbnail-image">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="product-1-thumnail" class="thumbnail-image" onclick="openLightbox();toSlide(1)">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="thumbnail-image"onclick="openLightbox();toSlide(2)">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="thumbnail-image"onclick="openLightbox();toSlide(3)">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="thumbnail-image"onclick="openLightbox();toSlide(4)">
       </div>
     </section>
 
-    <section class="product-text-section">
+    <section class="product-text-section" aria-labelledby="text-section-of-product-contains-price-and-product-info">
       <div class="product-heading-container">
         <div class="company-name">SNEAKER COMPANY</div>
         <div class="product-name">Fall Limited Edition Sneakers</div>

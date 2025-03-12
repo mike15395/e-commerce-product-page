@@ -213,6 +213,26 @@ main .product-image-section{
     border-radius: 10px;
 }
 
+.main-image:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.main-image-container{
+    position: relative;
+
+}
+
+.previous-small,.next-small{
+    display: none;
+}
+
+
+.thumbnail-image:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 .product-image-section .product-more-images-container{
     display: flex;
     gap: 32px;
@@ -370,8 +390,149 @@ background-color: #FFAB6A;
     
 }
 
+/*light box modal for desktop view only*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 0 0;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  /* Same with your slides, you set the display to none, because you want to choose which 
+     one is shown at a time. */
+  
+  .slide {
+    display: none;
+  }
+  
+  .image-slide {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .modal-preview {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* You want the previews a little transparent to show that they are "inactive". 
+     You then add an .active or :hover class to animate the selections for your user when
+     they interact with your controls and clickable content.
+   */
+  
+  img.preview, img.modal-preview {
+    opacity: 0.6;
+  }
+  
+  img.active,
+  .preview:hover,
+  .modal-preview:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  } 
+  
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: var(--orange);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .previous,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width:auto;
+    height: auto;
+    padding: 27px;
+    margin-top: -50px;
+    /* color: white; */
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: white;
+    user-select: none;
+    -webkit-user-select: none;
+
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 50%;
+  }
+  
+  .previous:hover,
+  .next:hover {
+background-color: var(--orange);
+}
+/* light-box modal ends*/  
+
 /* tablet view*/
 @media all and (max-width:768px){
+
+.main-image-container .previous-small{
+    display: block;
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 50%;
+    /* margin-left: 10px; */
+}
+
+.main-image-container .next-small{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    background-color: white;
+    padding: 3%;
+    border-radius: 50%;
+    /* margin-right: -20px; */
+}
+
 
     .menu-sidebar{
         
@@ -402,7 +563,7 @@ background-color: #FFAB6A;
     }
 
     .menu-sidebar .close-icon{
-        margin-top: 48px;
+        margin-top: -30px;
         width: 20px;
         height: 20px;
     }
@@ -492,7 +653,7 @@ background-color: #FFAB6A;
         right: 200px;
     }
     .menu-sidebar .close-icon{
-        margin-top: 20px;
+        margin-top: -20px;
     }
     .cart-content-container{
         position: absolute;

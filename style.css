@@ -68,6 +68,7 @@ header .header-icon-cart-container{
 header .header-logo{
     width: 150px;
     height: 20px;
+    cursor: pointer;
 }
 header .header-icon-cart-container .cart-container{
     position: relative;
@@ -557,6 +558,7 @@ background-color: var(--orange);
         border-radius: 5px;
         left: 40vw;
         top: 20vh;
+        z-index: 1;
         display: none;
     
     }
@@ -664,6 +666,7 @@ background-color: var(--orange);
         left: 5vw;
         top: 20vh;
         margin: 10px;
+        z-index: 1;
         display: none;
     
     }

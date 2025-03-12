@@ -139,3 +139,36 @@ function showSlide(n) {
   slides[slideIndex - 1].style.display = "block";
   modalPreviews[slideIndex - 1].className += " active";
 }
+
+//tablet and mobile view next-prev buttons for image carousel
+let srcIndex = 0;
+function smallDeviceImageCarousel(n) {
+  let mainImage = document.querySelector(".main-image");
+  let imagesSrcArray = [
+    "./images/image-product-1.jpg",
+    "./images/image-product-2.jpg",
+    "./images/image-product-3.jpg",
+    "./images/image-product-4.jpg",
+  ];
+
+  //show next image
+  if (n === 1) {
+    if (srcIndex >= imagesSrcArray.length - 1) {
+      srcIndex = 0;
+      mainImage.src = imagesSrcArray[srcIndex];
+      return;
+    }
+    srcIndex = srcIndex + 1;
+  }
+
+  //show previous image
+  if (n === -1) {
+    if (srcIndex === 0) {
+      srcIndex = imagesSrcArray.length;
+    }
+    srcIndex = srcIndex - 1;
+  }
+
+  mainImage.src = imagesSrcArray[srcIndex];
+  mainImage.style.transition = "0.5s ease-in-out";
+}
